@@ -20,7 +20,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "MyNotes Application",
+    title: "Scribbly Notes-Application",
     description:
       "A modern and intuitive notes manager built with React, Bootstrap, and Express.",
     image: "/projects/Mynotes.png",
