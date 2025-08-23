@@ -6,15 +6,15 @@ const Skills = [
   { name: "JavaScript", level: 90, category: "frontend" },
   { name: "React.js", level: 85, category: "frontend" },
   { name: "Tailwind CSS", level: 85, category: "frontend" },
-  { name: "Bootstrap", level: 80, category: "frontend" },
+  // { name: "Bootstrap", level: 80, category: "frontend" },
 
   //   Backend
   { name: "Node.js", level: 70, category: "backend" },
   { name: "Express.js", level: 75, category: "backend" },
   { name: "MongoDB", level: 80, category: "backend" },
   { name: "Mongoose", level: 75, category: "backend" },
-  { name: "REST APIs", level: 80, category: "backend" },
   { name: "MySql", level: 75, category: "backend" },
+   { name: "REST APIs", level: 80, category: "backend" },
 
   // Tools
   { name: "Git/GitHub", level: 90, category: "tools" },

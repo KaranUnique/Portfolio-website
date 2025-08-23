@@ -7,6 +7,7 @@ import {
   Phone,
   Twitter,
   Send,
+  Github,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "../hooks/use-toast";
@@ -144,7 +145,14 @@ export const ContactSection = () => {
                 >
                   <Linkedin className="hover:text-primary transition-colors" />
                 </a>
-
+                 <a
+                  href="https://github.com/KaranUnique"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram Profile"
+                >
+                  <Github className="hover:text-primary transition-colors" />
+                </a>
                 <a
                   href="https://www.instagram.com/karan_unix.x/"
                   target="_blank"
