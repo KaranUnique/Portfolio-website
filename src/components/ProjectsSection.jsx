@@ -37,7 +37,7 @@ const projects = [
     tag: ["JavaScript", "Node.js", "Chalk", "Yargs"],
     // demoUrl: "#",
     githubUrl:
-      "https://github.com/KaranUnique/Vision-Based-Drowsiness-Detection",
+      "https://github.com/KaranUnique/Code-Migration-CLI-Tool",
   },
   {
     id: 4,
