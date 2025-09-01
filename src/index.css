@@ -67,7 +67,7 @@
   :root {
     --background: 0 0% 100%;           /* White */
     --foreground: 0 0% 0%;             /* Black */
-    --card: 0 0% 100%;                 /* White */
+    --card: 0 0% 98%;                 /* White */
     --primary: 221 92% 48%;            /* Royal Blue #0A58ED */
     --primary-foreground: 0 0% 100%;   /* White for contrast on blue */
     --border: 0 0% 80%;                /* Light gray border */

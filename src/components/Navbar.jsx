@@ -14,6 +14,37 @@ const navItems = [
 
 export const Navbar = () => {
   const [isscrolled, setIsscolled] = useState(false);
+  const [activeHash, setActiveHash] = useState("#hero");
+
+  useEffect(() => {
+    const sectionIds = navItems.map(item => item.href.replace('#', ''));
+    const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+    let ticking = false;
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          let found = false;
+          for (let i = 0; i < sections.length; i++) {
+            const section = sections[i];
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= 80 && rect.bottom > 80) {
+              setActiveHash(`#${section.id}`);
+              found = true;
+              break;
+            }
+          }
+          if (!found) setActiveHash("#hero");
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const handlescroll = () => {
@@ -66,17 +97,26 @@ export const Navbar = () => {
       {/* Bottom Navbar (Mobile Only) */}
       <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-md bg-background/90 backdrop-blur-xl shadow-lg md:hidden z-50 rounded-2xl border border-border">
         <div className="flex justify-around items-center py-2">
-          {navItems.map((items, key) => (
-            <a
-              key={key}
-              href={items.href}
-              className="flex flex-col items-center text-foreground/70 hover:text-primary transition group"
-            >
-              <span className="p-2 rounded-full group-hover:bg-primary/10 transition">
-                {items.icon}
-              </span>
-            </a>
-          ))}
+          {navItems.map((items, key) => {
+            const isActive = activeHash === items.href;
+            return (
+              <a
+                key={key}
+                href={items.href}
+                className={cn(
+                  "flex flex-col items-center transition group",
+                  isActive ? "text-primary" : "text-foreground/70 hover:text-primary"
+                )}
+              >
+                <span className={cn(
+                  "p-2 rounded-full transition",
+                  isActive ? "bg-primary/10 text-primary" : "group-hover:bg-primary/10"
+                )}>
+                  {items.icon}
+                </span>
+              </a>
+            );
+          })}
         </div>
       </div>
     </>
