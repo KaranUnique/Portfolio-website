@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home, User, Briefcase, Code, Phone, BadgeCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "#hero", icon: <Home size={22} /> },
+  { name: "About", href: "#about", icon: <User size={22} /> },
+  { name: "Skills", href: "#skills", icon: <BadgeCheck size={22} /> },
+  { name: "Projects", href: "#projects", icon: <Code size={22} /> },
+  { name: "Experience", href: "#experience", icon: <Briefcase size={22} /> },
+  { name: "Contact", href: "#contact", icon: <Phone size={22} /> },
 ];
 
 export const Navbar = () => {
   const [isscrolled, setIsscolled] = useState(false);
-  const [isMenuOpen,setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handlescroll = () => {
@@ -23,65 +23,62 @@ export const Navbar = () => {
     window.addEventListener("scroll", handlescroll);
     return () => window.removeEventListener("scroll", handlescroll);
   }, []);
+
   return (
-    <nav
-      className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isscrolled ? "py-5 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
-      )}
-    >
-      <div className="container flex items-center justify-between">
-        <a
-          className="text-xl font-bold text-primary flex items-center"
-          href="#hero"
-        >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground pr-1">{"<KaranUnix />"}</span>
-            Portfolio
-          </span>
-        </a>
-
-        {/* desktop navbar  */}
-
-        <div className="hidden md:flex space-x-8">
-          {navItems.map((items, key) => (
-            <a
-              key={key}
-              href={items.href}
-              className="text-foreground/80 hover:text-primary transition-colors-300"
-            >
-              {items.name}
-            </a>
-          ))}
-        </div>
-        {/* mobile navbar  */}
-
-        <button onClick={()=>setIsMenuOpen((prev)=> !prev)}
-            className="md:hidden p-2 text-foreground z-50"
-            aria-label={isMenuOpen ? "Close Menu":"Open Menu"}
-
-            >{isMenuOpen ? <X  size={24}/> : <Menu size={24}/>}</button>
-        <div
-          className={cn(
-            "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
-            "transition-all duration-300 md:hidden",
-            isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-          )}
-        >
-          <div className=" flex flex-col space-y-8 text-xl">
+    <>
+      {/* Top Navbar (All screens) */}
+      <nav
+        className={cn(
+          "fixed w-full z-40 transition-all duration-300",
+          isscrolled
+            ? "py-5 bg-background/80 backdrop-blur-md shadow-xs"
+            : "py-5"
+        )}
+      >
+        <div className="container flex items-center justify-between">
+          {/* Title: always visible, centered on mobile, left on desktop */}
+          <a
+            className="text-xl font-bold text-primary flex items-center ml-0"
+            href="#hero"
+          >
+            <span className="relative z-10">
+              <span className="text-glow text-foreground pr-1">
+                {"<KaranUnix />"}
+              </span>
+              Portfolio
+            </span>
+          </a>
+          {/* Desktop nav */}
+          <div className="hidden md:flex space-x-8">
             {navItems.map((items, key) => (
               <a
                 key={key}
                 href={items.href}
                 className="text-foreground/80 hover:text-primary transition-colors-300"
-                onClick={()=>setIsMenuOpen(false)}
               >
                 {items.name}
               </a>
             ))}
           </div>
         </div>
+      </nav>
+
+      {/* Bottom Navbar (Mobile Only) */}
+      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-md bg-background/90 backdrop-blur-xl shadow-lg md:hidden z-50 rounded-2xl border border-border">
+        <div className="flex justify-around items-center py-2">
+          {navItems.map((items, key) => (
+            <a
+              key={key}
+              href={items.href}
+              className="flex flex-col items-center text-foreground/70 hover:text-primary transition group"
+            >
+              <span className="p-2 rounded-full group-hover:bg-primary/10 transition">
+                {items.icon}
+              </span>
+            </a>
+          ))}
+        </div>
       </div>
-    </nav>
+    </>
   );
 };
