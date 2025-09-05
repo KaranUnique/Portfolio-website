@@ -10,12 +10,12 @@ import { useState } from "react";
 const projects = [
   {
     id: 1,
-    title: "Interview Preparation Tracker",
+    title: "Interview Preparation AI",
     description:
-      "A smart and organized interview preparation tracker created using React and Express.",
-    image: "/projects/PreparationTracker.png",
+      "An AI-powered interview preparation platform built with React and Express.",
+    image: "/projects/InterviewPrepAI.png",
     tag: ["React", "Tailwind", "ExpressJs", "MongoDB"],
-    // demoUrl: "#",
+     demoUrl: "https://interview-preparation-ai-zu05.onrender.com/",
     githubUrl: "https://github.com/KaranUnique/Interview-Prep-Tracker",
   },
   {
@@ -25,7 +25,7 @@ const projects = [
       "A modern and intuitive notes manager built with React, Bootstrap, and Express.",
     image: "/projects/Mynotes.png",
     tag: ["React", "Bootstrap", "ExpressJs", "MongoDB"],
-    // demoUrl: "#",
+    demoUrl: "https://scribbly-notes.onrender.com/",
     githubUrl: "https://github.com/KaranUnique/MyNotes",
   },
   {
@@ -39,8 +39,18 @@ const projects = [
     githubUrl:
       "https://github.com/KaranUnique/Code-Migration-CLI-Tool",
   },
-  {
+   {
     id: 4,
+    title: "CryptoHub",
+    description:
+      "CryptoHub brings you real-time crypto prices and trends with insights on your favorite coins.",
+    image: "/projects/Cryptohub.png",
+    tag: ["React", "Tailwind", "CoinGecko API"],
+    demoUrl: "https://crypto-hub-rosy.vercel.app/",
+    githubUrl: "https://github.com/KaranUnique/CryptoHub",
+  },
+  {
+    id: 5,
     title: "Drowsiness Detection",
     description:
       "A real-time drowsiness detection system using computer vision and machine learning.",
@@ -50,16 +60,7 @@ const projects = [
     githubUrl:
       "https://github.com/KaranUnique/Vision-Based-Drowsiness-Detection",
   },
-  {
-    id: 5,
-    title: "CryptoHub",
-    description:
-      "CryptoHub brings you real-time crypto prices and trends with insights on your favorite coins.",
-    image: "/projects/Cryptohub.png",
-    tag: ["React", "Tailwind", "CoinGecko API"],
-    demoUrl: "https://crypto-hub-rosy.vercel.app/",
-    githubUrl: "https://github.com/KaranUnique/CryptoHub",
-  },
+ 
   // {
   //   id: 6,
   //   title: "Gym-Ecommerce",

@@ -49,20 +49,20 @@ export const SkillsGrid = () => {
   return (
     <section id="skills" className="py-24 px-6 bg-secondary/30">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
-          My <span className="text-primary">Skills</span>
+        <h2 className="text-4xl md:text-4xl font-bold mb-16 text-center">
+          My <span className="text-primary">Expertise</span>
         </h2>
 
-        <div className="space-y-20">
+        <div className="space-y-10">
           {skills.map((block, idx) => (
             <div key={idx} className="text-center">
               {/* category title left aligned */}
-              <h3 className="text-2xl font-semibold mb-10 text-left">
+              <h3 className="text-xl font-semibold mb-5 text-left">
                 {block.category}
               </h3>
 
-              {/* skills grid in center */}
-              <div className="flex flex-wrap justify-center gap-10">
+              {/* skills grid slightly right shifted */}
+              <div className="flex flex-wrap justify-center gap-10 md:ml-30">
                 {block.items.map((skill, i) => (
                   <div
                     key={i}
