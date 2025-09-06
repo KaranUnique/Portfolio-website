@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 
 @theme {
   --color-border: hsl(var(--border));
@@ -65,21 +65,21 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;           /* White */
-    --foreground: 0 0% 0%;             /* Black */
-    --card: 0 0% 98%;                 /* White */
-    --primary: 221 92% 48%;            /* Royal Blue #0A58ED */
-    --primary-foreground: 0 0% 100%;   /* White for contrast on blue */
-    --border: 0 0% 80%;                /* Light gray border */
+    --background: 0 0% 100%;          
+    --foreground: 0 0% 0%;             
+    --card: 0 0% 98%;                 
+    --primary: 221 92% 48%;            
+    --primary-foreground: 0 0% 100%;  
+    --border: 0 0% 80%;                
   }
 
   .dark {
-    --background: 0 0% 0%;             /* Black */
-    --foreground: 0 0% 100%;           /* White */
-    --card:221 47% 8%;                /* Very dark gray */
-    --primary: 221 92% 48%;            /* Royal Blue #0A58ED */
-    --primary-foreground: 0 0% 100%;   /* White for contrast on blue */
-    --border: 0 0% 20%;                /* Dark gray border */
+    --background: 0 0% 0%;            
+    --foreground: 0 0% 100%;         
+    --card:221 47% 8%;              
+    --primary: 221 92% 48%;            
+    --primary-foreground: 0 0% 100%;   
+    --border: 0 0% 20%;                
   }
   
   *{
@@ -159,14 +159,12 @@
     text-align: center;
 }
 
-/* Custom rotation class for about section flip */
 .rotate-y-180 {
     transform: rotateY(180deg);
-}
+} */
 
 /*-------------------------------------------------------------*/
-/* 
-@import "tailwindcss";
+ @import "tailwindcss";
 
 @theme {
   --color-border: hsl(var(--border));
@@ -332,7 +330,7 @@
     text-align: center;
 }
 
-/* Custom rotation class for about section flip */
-/* .rotate-y-180 {
+
+ .rotate-y-180 {
     transform: rotateY(180deg);
-} */ 
+} 
