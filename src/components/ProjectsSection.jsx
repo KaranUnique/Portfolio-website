@@ -5,6 +5,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import { FaDocker } from "react-icons/fa";
 import { useState } from "react";
 
 const projects = [
@@ -18,8 +19,19 @@ const projects = [
      demoUrl: "https://interview-preparation-ai-zu05.onrender.com/",
     githubUrl: "https://github.com/KaranUnique/Interview-Prep-Tracker",
   },
-  {
+    {
     id: 2,
+    title: "Code Migration CLI",
+    description:
+      "A lightweight CLI tool to automate code migration seamlessly and transform code",
+    image: "/projects/CodeMigration.png",
+    tag: ["JavaScript", "Node.js", "Chalk", "Yargs"],
+    demoUrl: "https://hub.docker.com/r/karanunix/code-migration-cli", // Docker Hub link
+    githubUrl:
+      "https://github.com/KaranUnique/Code-Migration-CLI-Tool",
+  },
+  {
+    id: 3,
     title: "Scribbly Notes-Application",
     description:
       "A modern and intuitive notes manager built with React, Bootstrap, and Express.",
@@ -28,17 +40,7 @@ const projects = [
     demoUrl: "https://scribbly-notes.onrender.com/",
     githubUrl: "https://github.com/KaranUnique/MyNotes",
   },
-  {
-    id: 3,
-    title: "Code Migration CLI",
-    description:
-      "A lightweight CLI tool to automate code migration seamlessly and transform code",
-    image: "/projects/CodeMigration.png",
-    tag: ["JavaScript", "Node.js", "Chalk", "Yargs"],
-    // demoUrl: "#",
-    githubUrl:
-      "https://github.com/KaranUnique/Code-Migration-CLI-Tool",
-  },
+
    {
     id: 4,
     title: "CryptoHub",
@@ -189,7 +191,11 @@ export const ProjectSection = () => {
                           className="text-primary hover:text-primary/80 transition-colors duration-300 flex items-center gap-1"
                           aria-label="View demo"
                         >
-                          <ExternalLink size={20} />
+                          {project.title === "Code Migration CLI" ? (
+                            <FaDocker size={22} />
+                          ) : (
+                            <ExternalLink size={20} />
+                          )}
                         </a>
                       )}
                     </div>
