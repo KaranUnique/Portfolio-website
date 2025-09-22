@@ -54,7 +54,7 @@ const projects = [
     {
     id: 5,
     title: "Sporix Landing Page",
-    description:"A dynamic and user-friendly website designed to showcase our college feast, featuring event details, schedules, registrations, and highlights",
+    description:"Responsive website for our college feast with event details and registrations",
     image: "/projects/CollegeFeast.png",
     tag: ["React.js", "Tailwind"],
     demoUrl: "https://sporix2k25.vercel.app/",
