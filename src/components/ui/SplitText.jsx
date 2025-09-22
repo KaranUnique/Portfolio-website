@@ -1,10 +1,10 @@
 import { useRef, useEffect, useState } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { SplitText as GSAPSplitText } from 'gsap/SplitText';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import SplitTextPlugin from 'gsap/SplitText';
 import { useGSAP } from '@gsap/react';
 
-gsap.registerPlugin(ScrollTrigger, GSAPSplitText, useGSAP);
+gsap.registerPlugin(ScrollTrigger, SplitTextPlugin, useGSAP);
 
 const SplitText = ({
   text,
@@ -69,7 +69,7 @@ const SplitText = ({
         if (!targets) targets = self.chars || self.words || self.lines;
       };
 
-      const splitInstance = new GSAPSplitText(el, {
+  const splitInstance = new SplitTextPlugin(el, {
         type: splitType,
         smartWrap: true,
         autoSplit: splitType === 'lines',
