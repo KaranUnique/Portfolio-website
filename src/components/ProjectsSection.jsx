@@ -15,7 +15,7 @@ const projects = [
     description:
       "An AI-powered interview preparation platform built with React and Express.",
     image: "/projects/InterviewPrepAI.png",
-    tag: ["React", "Tailwind", "ExpressJs", "MongoDB"],
+    tag: ["React.js", "Tailwind", "ExpressJs", "MongoDB"],
      demoUrl: "https://interview-preparation-ai-zu05.onrender.com/",
     githubUrl: "https://github.com/KaranUnique/Interview-Prep-Tracker",
   },
@@ -36,7 +36,7 @@ const projects = [
     description:
       "A modern and intuitive notes manager built with React, Bootstrap, and Express.",
     image: "/projects/Mynotes.png",
-    tag: ["React", "Bootstrap", "ExpressJs", "MongoDB"],
+    tag: ["React.js", "Bootstrap", "Express.js", "MongoDB"],
     demoUrl: "https://scribbly-notes.onrender.com/",
     githubUrl: "https://github.com/KaranUnique/MyNotes",
   },
@@ -47,12 +47,22 @@ const projects = [
     description:
       "CryptoHub brings you real-time crypto prices and trends with insights on your favorite coins.",
     image: "/projects/Cryptohub.png",
-    tag: ["React", "Tailwind", "CoinGecko API"],
+    tag: ["React.js", "Tailwind", "CoinGecko API"],
     demoUrl: "https://crypto-hub-rosy.vercel.app/",
     githubUrl: "https://github.com/KaranUnique/CryptoHub",
   },
-  {
+    {
     id: 5,
+    title: "Sporix Landing Page",
+    description:"A dynamic and user-friendly website designed to showcase our college feast, featuring event details, schedules, registrations, and highlights",
+    image: "/projects/CollegeFeast.png",
+    tag: ["React.js", "Tailwind"],
+    demoUrl: "https://sporix2k25.vercel.app/",
+    githubUrl:
+      "https://github.com/KaranUnique/symposium",
+  },
+  {
+    id: 6,
     title: "Drowsiness Detection",
     description:
       "A real-time drowsiness detection system using computer vision and machine learning.",
@@ -62,6 +72,7 @@ const projects = [
     githubUrl:
       "https://github.com/KaranUnique/Vision-Based-Drowsiness-Detection",
   },
+ 
  
   // {
   //   id: 6,
@@ -122,27 +133,27 @@ export const ProjectSection = () => {
         </p>
 
         <div className="relative">
-          {/* Left Navigation Arrow */}
-          <button
-            onClick={prevProjects}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-8 z-10 p-3 rounded-full bg-primary/20 hover:bg-primary/30 transition-all duration-300 backdrop-blur-sm shadow-lg"
-            aria-label="Previous projects"
-          >
-            <ChevronLeft size={24} className="text-primary" />
-          </button>
+          {/* Navigation arrows and indicators only for md and up */}
+          <div className="hidden md:block">
+            <button
+              onClick={prevProjects}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-8 z-10 p-3 rounded-full bg-primary/20 hover:bg-primary/30 transition-all duration-300 backdrop-blur-sm shadow-lg"
+              aria-label="Previous projects"
+            >
+              <ChevronLeft size={24} className="text-primary" />
+            </button>
+            <button
+              onClick={nextProjects}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-8 z-10 p-3 rounded-full bg-primary/20 hover:bg-primary/30 transition-all duration-300 backdrop-blur-sm shadow-lg"
+              aria-label="Next projects"
+            >
+              <ChevronRight size={24} className="text-primary" />
+            </button>
+          </div>
 
-          {/* Right Navigation Arrow */}
-          <button
-            onClick={nextProjects}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-8 z-10 p-3 rounded-full bg-primary/20 hover:bg-primary/30 transition-all duration-300 backdrop-blur-sm shadow-lg"
-            aria-label="Next projects"
-          >
-            <ChevronRight size={24} className="text-primary" />
-          </button>
-
-          {/* Projects Grid */}
+          {/* Projects Grid: show all projects in order for mobile, carousel for md+ */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500">
-            {visibleProjects.map((project) => (
+            {(window.innerWidth < 768 ? projects : visibleProjects).map((project) => (
               <div
                 key={project.id}
                 className="group bg-card rounded-xl overflow-hidden shadow-lg card-hover transform transition-all duration-300 flex flex-col justify-between h-full border border-border dark:border-primary/20"
