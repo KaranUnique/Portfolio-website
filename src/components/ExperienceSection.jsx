@@ -4,7 +4,7 @@ const experiences = [
   {
     role: "Web Development Intern",
     company: "Oasis Infobyte",
-    period: "Aug 2025 - Present",
+    period: "Aug 2025 - Sep 2025",
     location: "Remote",
     description: "Currently assisting in designing, developing, and maintaining responsive websites and web applications using modern technologies.",
     skills: ["HTML/CSS", "JavaScript", "React", "Tailwind CSS"],
