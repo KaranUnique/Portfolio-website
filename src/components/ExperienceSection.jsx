@@ -8,7 +8,7 @@ const experiences = [
     location: "Remote",
     description: "Currently assisting in designing, developing, and maintaining responsive websites and web applications using modern technologies.",
     skills: ["HTML/CSS", "JavaScript", "React", "Tailwind CSS"],
-    type: "Current"
+    type: "Completed"
   },
   {
     role: "Frontend Developer Intern",
