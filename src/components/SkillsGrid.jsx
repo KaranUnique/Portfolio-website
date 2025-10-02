@@ -1,6 +1,7 @@
 import React from "react";
 import "devicon/devicon.min.css"; // import devicon styles
 import { FaCode, FaNetworkWired } from "react-icons/fa"; // fallback + REST API
+import { SiC, SiPopos } from "react-icons/si"; // C language & Pop!_OS icons
 
 const skills = [
   {
@@ -9,6 +10,7 @@ const skills = [
       { name: "Java", icon: "devicon-java-plain colored" },
       { name: "JavaScript", icon: "devicon-javascript-plain colored" },
       { name: "Python", icon: "devicon-python-plain colored" },
+  { name: "C", icon: <SiC className="text-blue-700 dark:text-blue-700 text-4xl" /> },
     ],
   },
   {
@@ -41,6 +43,7 @@ const skills = [
       { name: "Intellij IDEA", icon: "devicon-intellij-plain colored" },
       { name: "Kiro IDE", icon: <FaCode className="text-primary text-4xl" /> },
       { name: "Canva", icon: "devicon-canva-plain colored" }, // fallback
+  { name: "Pop Linux", icon: <SiPopos className="text-teal-500 dark:text-teal-400 text-4xl" /> },
     ],
   },
 ];

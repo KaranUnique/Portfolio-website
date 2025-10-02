@@ -53,10 +53,8 @@ export const HeroSection = () => {
             />
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity">
-            I'm a passionate and self-driven web developer with a strong
-            foundation in HTML, CSS, JavaScript, and the MERN stack. I enjoy
-            building responsive, user-friendly websites and web applications
-            that solve real-world problems.
+           Code is the bridge between imagination and reality -
+I create smart, efficient, and user-centric digital experiences, transforming ideas into functional web solutions that make an impact.
           </p>
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">

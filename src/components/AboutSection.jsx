@@ -19,21 +19,14 @@ export const AboutSection = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">
-              Passionate Web Developer
+            <h3 className="text-2xl hidden md:block font-semibold">
+              MERN Stack Developer
             </h3>
-            <p className="text-muted-foreground">
-              I’m a passionate and dedicated web developer with a strong
-              interest in building impactful digital solutions. From crafting
-              responsive frontends to developing full-stack applications, I
-              enjoy turning ideas into interactive, user-friendly experiences.
-            </p>
-            <p className="text-muted-foreground">
-              I have hands-on experience with technologies like HTML, CSS,
-              JavaScript, React, Node.js, and MongoDB. I’m constantly learning
-              and love taking on new challenges that help me grow as a
-              developer.
-            </p>
+            <div className="border border-primary/30 rounded-xl p-6 bg-background/40 backdrop-blur-sm space-y-4">
+              <p className="text-muted-foreground leading-relaxed">
+                I’m a passionate web developer interested in creating impactful digital solutions. I enjoy building responsive frontends and full-stack applications that deliver user-friendly experiences. Skilled in HTML, CSS, JavaScript, React, Node.js, and MongoDB, I’m always eager to learn and take on new challenges to grow as a developer.
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
                 Get In Touch
@@ -47,8 +40,10 @@ export const AboutSection = () => {
                 Download CV
               </a>
             </div>
+            {/* Mobile skills list removed per request to hide texts on small screens */}
           </div>
-          <div className="relative" style={{ perspective: '1000px', height: 'fit-content' }}>
+          {/* Flip container hidden on mobile */}
+          <div className="relative hidden md:block" style={{ perspective: '1000px', height: 'fit-content' }}>
             {/* Front Side - Skills Cards */}
             <div 
               className={`grid grid-cols-1 gap-6 transition-transform duration-1000 ease-in-out ${isFlipped ? 'rotate-y-180' : ''}`}
