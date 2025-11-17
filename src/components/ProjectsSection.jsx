@@ -61,19 +61,19 @@ const projects = [
     githubUrl:
       "https://github.com/KaranUnique/symposium",
   },
+  // {
+  //   id: 6,
+  //   title: "Sustainable Navigation App",
+  //   description:
+  //     "A sustainable navigation app that suggests eco-friendly routes based on optimal paths and users’ health preferences",
+  //   image: "/projects/SNA.png",
+  //   tag: ["React Native", "Express.js", "MongoDB"],
+  //   // demoUrl: "#",
+  //   githubUrl:
+  //     "https://github.com/KaranUnique/Sustainable-Navigation-App",
+  // },
   {
     id: 6,
-    title: "Sustainable Navigation App",
-    description:
-      "A sustainable navigation app that suggests eco-friendly routes based on optimal paths and users’ health preferences",
-    image: "/projects/SNA.png",
-    tag: ["React Native", "Express.js", "MongoDB"],
-    // demoUrl: "#",
-    githubUrl:
-      "https://github.com/KaranUnique/Sustainable-Navigation-App",
-  },
-  {
-    id: 7,
     title: "Drowsiness Detection",
     description:
       "A real-time drowsiness detection system using computer vision and machine learning.",
