@@ -2,13 +2,13 @@ import { Briefcase, Calendar, MapPin, ExternalLink, Award, TrendingUp } from "lu
 
 const experiences = [
   {
-    role: "Web Development Intern",
-    company: "Oasis Infobyte",
-    period: "Aug 2025 - Sep 2025",
+    role: "Software Development Engineer",
+    company: "Praskla Technology",
+    period: "Oct 2025 - Present",
     location: "Remote",
-    description: "Currently assisting in designing, developing, and maintaining responsive websites and web applications using modern technologies.",
-    skills: ["HTML/CSS", "JavaScript", "React", "Tailwind CSS"],
-    type: "Completed"
+    description: "Built end-to-end solutions using React, Node.js, Express.js with dynamic MongoDB and MySQL integration.",
+    skills: ["JavaScript", "React", "Node.js", "Express.js", "MongoDB"],
+    type: "Current"
   },
   {
     role: "Frontend Developer Intern",

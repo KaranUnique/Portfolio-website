@@ -1,7 +1,7 @@
 import React from "react";
 import "devicon/devicon.min.css"; // import devicon styles
 import { FaCode, FaNetworkWired } from "react-icons/fa"; // fallback + REST API
-import { SiC, SiPopos } from "react-icons/si"; // C language & Pop!_OS icons
+import { SiC, SiPopos, SiReact } from "react-icons/si"; // C language, Pop!_OS, React Native icons
 
 const skills = [
   {
@@ -9,6 +9,7 @@ const skills = [
     items: [
       { name: "Java", icon: "devicon-java-plain colored" },
       { name: "JavaScript", icon: "devicon-javascript-plain colored" },
+      { name: "TypeScript", icon: "devicon-typescript-plain colored" },
       { name: "Python", icon: "devicon-python-plain colored" },
   { name: "C", icon: <SiC className="text-blue-700 dark:text-blue-700 text-4xl" /> },
     ],
@@ -20,8 +21,9 @@ const skills = [
       { name: "CSS3", icon: "devicon-css3-plain colored" },
       { name: "JavaScript", icon: "devicon-javascript-plain colored" },
       { name: "React.js", icon: "devicon-react-original colored" },
+      { name: "React Native", icon: <SiReact className="text-blue-900 dark:text-blue-400 text-4xl" /> },
+     
       { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
-      { name: "Vite.js", icon: "devicon-vitejs-plain colored" }
     ],
   },
   {
@@ -29,6 +31,7 @@ const skills = [
     items: [
       { name: "Node.js", icon: "devicon-nodejs-plain colored" },
       { name: "Express.js", icon: "devicon-express-original" },
+       { name: "Firebase", icon: "devicon-firebase-plain colored" },
       { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
       { name: "MySql", icon: "devicon-mysql-plain colored" },
       { name: "REST APIs", icon: <FaNetworkWired className="text-primary text-4xl" /> }, // API icon
