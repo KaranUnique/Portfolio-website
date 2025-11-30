@@ -1,6 +1,7 @@
 import { Briefcase, Calendar, MapPin, ExternalLink, Award, TrendingUp } from "lucide-react";
 
 const experiences = [
+ 
   {
     role: "Software Development Engineer",
     company: "Praskla Technology",
@@ -10,6 +11,24 @@ const experiences = [
     skills: ["JavaScript", "React", "Node.js", "Express.js", "MongoDB"],
     type: "Current"
   },
+  {
+  "role": "Open Source Contributor",
+  "company": "Social Winter of Code",
+  "period": "Nov 2025 – Present",
+  "location": "Remote",
+  "description": "Contributing to open-source projects and enhanced existing features.",
+  "skills": ["JavaScript", "React", "Node.js", "Express.js", "MongoDB"],
+  "type": "Current"
+},
+   {
+  "role": "Open Source Contributor",
+  "company": "Hacktoberfest",
+  "period": "Oct 2025",
+  "location": "Remote",
+  "description": "Contributed to open-source projects by building full-stack features using React, Node.js, and Express.js and MongoDB.",
+  "skills": ["JavaScript", "React", "Node.js", "Express.js", "MongoDB", "MySQL"],
+  "type": "Completed"
+},
   {
     role: "Frontend Developer Intern",
     company: "Cube AI Solution",

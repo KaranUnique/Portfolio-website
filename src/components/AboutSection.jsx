@@ -1,16 +1,6 @@
 import { Briefcase, Code, User } from "lucide-react";
-import { useState, useEffect } from "react";
 
 export const AboutSection = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsFlipped(prev => !prev);
-    }, 8000);
-
-    return () => clearInterval(interval);
-  }, []);
   return (
     <section id="about" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
@@ -80,77 +70,38 @@ export const AboutSection = () => {
             </div>
             {/* Mobile skills list removed per request to hide texts on small screens */}
           </div>
-          {/* Flip container hidden on mobile */}
-          <div className="relative hidden md:block" style={{ perspective: '1000px', height: 'fit-content' }}>
-            {/* Front Side - Skills Cards */}
-            <div 
-              className={`grid grid-cols-1 gap-6 transition-transform duration-1000 ease-in-out ${isFlipped ? 'rotate-y-180' : ''}`}
-              style={{ 
-                transformStyle: 'preserve-3d',
-                backfaceVisibility: 'hidden',
-                WebkitBackfaceVisibility: 'hidden'
-              }}
-            >
-              <div className="gradient-border p-6 card-hover">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-primary/10">
-                 <User className="h-6 w-6 text-primary"/>
-                  </div>
-                 <div className="text-left">
-    <h4 className="font-semibold text-lg">B.E. Computer Science and Engineering</h4>
-    <p className="text-muted-foreground text-sm">Innovating digital solutions with a solid engineering foundation</p>
-</div>
-              
+          {/* Static About Me cards for desktop (no flip, no image) */}
+          <div className="hidden md:grid grid-cols-1 gap-6">
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <User className="h-6 w-6 text-primary" />
                 </div>
-              </div>
-              <div className="gradient-border p-6 card-hover">
-                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-primary/10">
-                   <Code className="h-6 w-6 text-primary"/>
-                  </div>
-                  <div className="text-left">
-                    <h4 className="font-semibold text-lg">MERN Stack Developer</h4>
-                    <p className="text-muted-foreground">Building dynamic and responsive web applications using the MERN stack.</p>
-                  </div>
-                </div>
-              </div>
-              <div className="gradient-border p-6 card-hover">
-                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-primary/10">
-                  <Briefcase className="h-6 w-6 text-primary"/>
-                  </div>
-                  <div className="text-left">
-                    <h4 className="font-semibold text-lg">Project Management</h4>
-                    <p className="text-muted-foreground">Leading project from conception to completion with agile methodologies.</p>
-                  </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-lg">B.E. Computer Science and Engineering</h4>
+                  <p className="text-muted-foreground text-sm">Innovating digital solutions with a solid engineering foundation</p>
                 </div>
               </div>
             </div>
-
-            {/* Back Side - Your Photo */}
-            <div 
-              className="absolute inset-0 transition-transform duration-1000 ease-in-out"
-              style={{ 
-                transformStyle: 'preserve-3d',
-                backfaceVisibility: 'hidden',
-                WebkitBackfaceVisibility: 'hidden',
-                transform: isFlipped ? 'rotateY(0deg)' : 'rotateY(180deg)'
-              }}
-            >
-              <div className="gradient-border overflow-hidden h-full min-h-[400px] relative">
-                <img 
-                  src="/projects/Karan.jpg"
-                  alt="Karan Manickam" 
-                  className="w-full h-full object-cover rounded-2xl"
-                  onLoad={() => console.log('✅ Image loaded successfully')}
-                  onError={(e) => {
-                    console.log('❌ Image failed, showing fallback');
-                    e.target.style.display = 'none';
-                    e.target.nextElementSibling.style.display = 'flex';
-                  }}
-                />
-                <div className="w-full h-full rounded-2xl bg-gradient-to-br from-primary to-purple-600 items-center justify-center text-white font-bold text-8xl absolute inset-0" style={{display: 'none'}}>
-                  K
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Code className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-lg">MERN Stack Developer</h4>
+                  <p className="text-muted-foreground">Building dynamic and responsive web applications using the MERN stack.</p>
+                </div>
+              </div>
+            </div>
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Briefcase className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-lg">Project Management</h4>
+                  <p className="text-muted-foreground">Leading project from conception to completion with agile methodologies.</p>
                 </div>
               </div>
             </div>
